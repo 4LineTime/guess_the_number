@@ -1,4 +1,5 @@
 import random
+import sys
 
 correct = 'you guessed correctly!'
 too_low = 'too low'
@@ -17,7 +18,13 @@ def generate_secret(low, high):
 
 def get_guess():
     '''get user's guess'''
-    return int(input('Guess the secret number? '))
+    try:
+        guess=int(input('Guess the secret number? '))
+    except ValueError:
+        print('you have entered non-integer input. please try again')
+        sys.exit(1)
+        
+    return guess
 
 
 def check_guess(guess, secret):
