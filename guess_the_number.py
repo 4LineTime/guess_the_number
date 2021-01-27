@@ -50,7 +50,13 @@ def main():
         print(result)
 
         if result == correct:
-            break
+            again = input('Would you like to play again? (y/n)')[0].lower()
+            if again !='y':
+                print('Thanks for playing!')
+                break
+            
+
+
 
 
 if __name__ == '__main__':
