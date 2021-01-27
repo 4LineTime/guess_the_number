@@ -19,6 +19,8 @@ def generate_secret(low, high):
 def get_guess():
     '''get user's guess'''
     try:
+        print("WELCOME To guess the number program ")
+        
         guess=int(input('Guess the secret number? '))
     except ValueError:
         print('you have entered non-integer input. please try again')
