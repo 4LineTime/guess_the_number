@@ -22,7 +22,7 @@ def get_guess():
         guess=int(input('Guess the secret number? '))
     except ValueError:
         print('you have entered non-integer input. please try again')
-        sys.exit(1)
+        sys.exit(1) #exit the code after error
         
     return guess
 
